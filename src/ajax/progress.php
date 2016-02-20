@@ -1,11 +1,8 @@
 <?php
-$v_url = \H::input("url", "POST");
-if($v_url !== ""){
-  $url_parts = parse_url($v_url);
-  parse_str($url_parts['query'], $query);
-
+$req_id = \H::input("id", "POST");
+if($req_id !== ""){
   $callback_function_name = "jQuery". preg_replace("/\D/", "", (float) '1.11.2' + (float) rand(0.00000000000000000, 0.10000000000000000)) . "_" . time() - 1;
-  $convert = \Requests::request("https://d.yt-downloader.org/check.php", array(
+  $convert = \Requests::request("https://d.yt-downloader.org/progress.php", array(
     "User-Agent" => "Mozilla/5.0 (X11; Linux i686) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/48.0.2564.23 Safari/537.36",
     "Host" => "d.yt-downloader.org",
     "Referer" => "https://www.youtube2mp3.cc/api/",
@@ -14,17 +11,16 @@ if($v_url !== ""){
     "Cache-Control" => "no-cache"
   ), array(
     "callback" => $callback_function_name,
-    "v" => $query['v'],
-    "f" => "mp3",
+    "id" => $req_id,
     "_" => time()
   ))->body;
   
-  if(preg_match("/hash\"\:/", $convert)){
+  if(preg_match("/progress/", $convert)){
     $response = preg_replace("/$callback_function_name\((.*?)/", "$1", $convert);
     $response = substr($response, 0, strlen($response) - 1);
     $response = json_decode($response, true);
   }
   
-  echo json_encode($response);
+  echo is_array($response) ? json_encode($response) : '';
 }
 ?>

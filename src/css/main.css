@@ -13,6 +13,7 @@
 .vidInfo .title{
   font-size: 2rem;
   margin: 0 0 30px 0;
+  line-height: 1.2em;
 }
 .vidInfo .download{
  margin-top:5px;
