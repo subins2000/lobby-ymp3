@@ -1,5 +1,5 @@
 <?php
-$v_url = \H::input("url", "POST");
+$v_url = \H::i("url", "", "POST");
 if($v_url !== ""){
   $url_parts = parse_url($v_url);
   parse_str($url_parts['query'], $query);
