@@ -10,7 +10,7 @@ $this->addStyle("main.css");
    <div class="footnote">
       <p>Service Provided By :</p>
       <a href="https://www.youtube2mp3.cc/" target="_blank">
-       <img src="<?php echo APP_SRC . "/src/image/service-logo.png";?>"/>
+       <img src="<?php echo $this->srcURL . "/src/image/service-logo.png";?>"/>
       </a>
    </div>
 </div>

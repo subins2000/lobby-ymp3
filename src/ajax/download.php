@@ -25,6 +25,13 @@ if(isset($_GET['hash']) && $_GET['s']){
     21 => 'qgxhg',
     22 => 'twrri',
     23 => 'fkaph',
+    24 => 'xqqqh',
+    25 => 'xrmrw',
+    26 => 'fjhlv',
+    27 => 'ejtbn',
+    28 => 'urynq',
+    29 => 'tjljs',
+    30 => 'ywjkg'
   );
   header('Expires: 0');
   header('Cache-Control: must-revalidate');

@@ -11,7 +11,7 @@ class ymp3 extends \Lobby\App{
     $this->addStyle("cdn/main.css");
     $this->addScript("cdn/main.js");
     
-    return array(APP_DIR . "/page-index.php");
+    return array($this->dir . "/page-index.php");
   }
 }
 ?>

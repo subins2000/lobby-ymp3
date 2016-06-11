@@ -1,5 +1,5 @@
 <?php
-$req_id = \H::i("id", "", "POST");
+$req_id = \Request::postParam("id", "");
 if($req_id !== ""){
   $callback_function_name = "jQuery". preg_replace("/\D/", "", (float) '1.11.2' + (float) rand(0.00000000000000000, 0.10000000000000000)) . "_" . time() - 1;
   $convert = \Requests::request("https://d.yt-downloader.org/progress.php", array(
