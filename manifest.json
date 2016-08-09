@@ -1,11 +1,14 @@
 {
- "name" : "YouTube MP3 Converter",
- "short_description" : "YouTube Video To MP3 Converter",
- "category" : "accessories",
- "sub_cateogry": "tools",
- "version" : "0.2",
- "author" : "Subin",
- "author_page" : "http://subinsb.com",
- "app_page" : "http://www.youtube2mp3.cc/",
- "logo" : "1"
+  "name" : "YouTube MP3 Converter",
+  "short_description" : "YouTube Video To MP3 Converter",
+  "category" : "accessories",
+  "sub_cateogry": "tools",
+  "version" : "0.3",
+  "require" : {
+    "lobby" : ">=0.9.1"
+  },
+  "author" : "Subin",
+  "author_page" : "http://subinsb.com",
+  "app_page" : "http://www.youtube2mp3.cc/",
+  "logo" : "1"
 }

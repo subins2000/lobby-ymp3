@@ -8,7 +8,7 @@ $.extend(lobby.app, {
   int: function(){},
   
   progress: function(id){
-    lobby.app.ajax("progress.php", {"id": id}, function(data){
+    lobby.app.ajax("progress", {"id": id}, function(data){
       data = JSON.parse(data);
       clearInterval(lobby.app.int);
       msg.html("Conversion is Progressing. Currently in phase " + data.progress);
@@ -25,7 +25,7 @@ $.extend(lobby.app, {
   },
 
   convert: function(videoURL){
-    lobby.app.ajax("convert.php", {"url" : videoURL}, function(data){
+    lobby.app.ajax("convert", {"url" : videoURL}, function(data){
       if(data === ""){
         msg.html("Error");
       }else{
