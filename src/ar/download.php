@@ -1,5 +1,4 @@
 <?php
-ini_set("display_errors", "on");
 if(isset($_GET['hash']) && $_GET['s']){
   $servers = array (
     1 => 'gpkio',

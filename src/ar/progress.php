@@ -14,13 +14,13 @@ if($req_id !== ""){
     "id" => $req_id,
     "_" => time()
   ))->body;
-  
+
   if(preg_match("/progress/", $convert)){
     $response = preg_replace("/$callback_function_name\((.*?)/", "$1", $convert);
     $response = substr($response, 0, strlen($response) - 1);
     $response = json_decode($response, true);
   }
-  
+
   echo is_array($response) ? json_encode($response) : '';
 }
 ?>
