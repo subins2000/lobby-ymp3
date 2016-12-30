@@ -1,9 +1,9 @@
 {
-  "name" : "YouTube MP3 Converter",
+  "name" : "YouTube 2 MP3",
   "short_description" : "YouTube Video To MP3 Converter",
   "category" : "accessories",
   "sub_cateogry": "tools",
-  "version" : "0.3.1",
+  "version" : "0.3.2",
   "require" : {
     "lobby" : ">=0.9.1"
   },
