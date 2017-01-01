@@ -1,37 +1,9 @@
 <?php
 if(isset($_GET['hash']) && $_GET['s']){
-  $servers = array (
-    1 => 'gpkio',
-    2 => 'hpbnj',
-    3 => 'macsn',
-    4 => 'pikku',
-    5 => 'fgkzc',
-    6 => 'hmqbu',
-    7 => 'kyhxj',
-    8 => 'nwwxj',
-    9 => 'sbist',
-    10 => 'ditrj',
-    11 => 'qypbr',
-    12 => 'wiyqr',
-    13 => 'sjjec',
-    14 => 'afyzk',
-    15 => 'kjzmv',
-    16 => 'txrys',
-    17 => 'kzrzi',
-    18 => 'rmira',
-    19 => 'umbbo',
-    20 => 'aigkk',
-    21 => 'qgxhg',
-    22 => 'twrri',
-    23 => 'fkaph',
-    24 => 'xqqqh',
-    25 => 'xrmrw',
-    26 => 'fjhlv',
-    27 => 'ejtbn',
-    28 => 'urynq',
-    29 => 'tjljs',
-    30 => 'ywjkg'
-  );
+  $servers = json_decode(<<<JSON
+{"1":"fzaqn","2":"agobe","3":"topsa","4":"hcqwb","5":"gdasz","6":"iooab","7":"idvmg","8":"bjtpp","9":"sbist","10":"gxgkr","11":"njmvd","12":"trciw","13":"sjjec","14":"puust","15":"ocnuq","16":"qxqnh","17":"jureo","18":"obdzo","19":"wavgy","20":"qlmqh","21":"avatv","22":"upajk","23":"tvqmt","24":"xqqqh","25":"xrmrw","26":"fjhlv","27":"ejtbn","28":"urynq","29":"tjljs","30":"ywjkg"}
+JSON
+  , true);
   header('Expires: 0');
   header('Cache-Control: must-revalidate');
   header('Pragma: public');
