@@ -3,7 +3,7 @@
   "short_description" : "YouTube Video To MP3 Converter",
   "category" : "accessories",
   "sub_cateogry": "tools",
-  "version" : "0.3.2",
+  "version" : "0.3.4",
   "require" : {
     "lobby" : ">=0.9.1"
   },
